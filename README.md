@@ -6,6 +6,11 @@ Behavioural Analysis is the backbone of threat hunting and security monitoring t
 # Common Legitimate Processes 
 System Idle Process PID(0) , System PID(4) : these processes are kernel level processes and the parent of all processes after that. The first process created when starting up a Windows machine is process “System Idle Process” which has a process ID of 0. A child process is then created named "System" with an ID of 4.
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/78951224/148023666-cee63924-3a94-4186-acd0-4524d80e02c1.png")
+
+</p>
+
 Client Server Runtime Subsystem (csrss.exe): is a vital windows process that supports the entire GUI in addition to other low-level windows functions. The legitimate csrss.exe resides at %SystemRoot%\System32\ and the processes cannot be killed or terminated by normal users. The termination of this process will shut down the machine or cause it to be in an unusable state.
 <p align="center">
 <img src="https://user-images.githubusercontent.com/78951224/148017580-d64b8ca8-7cd3-4373-9e1f-45e0f9b3dfb5.png"/>
