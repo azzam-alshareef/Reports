@@ -47,7 +47,7 @@ The majority of processes mentioned above are directly or indirectly related to 
 NSRL by National Institute of Standard and Technology (NIST) provides a database with known good and bad binary hashes that can be used to identify whether a binary is legitimate or malicious. Utilizing the database helps threat hunters to conduct integrity checks on the binaries or scripts in the environment. The following PowerShell command can be used to get the file hash of the any file. 
 
 
-C:\Windows\System32> Get-FileHash <File-Name> -Algorithm SHA1
+``C:\Windows\System32> Get-FileHash <File-Name> -Algorithm SHA1``
   
 The following screenshot shows the above-mentioned command being used on wininit.exe.
   
