@@ -6,9 +6,9 @@ Behavioural Analysis is the backbone of threat hunting and security monitoring t
 # Common Legitimate Processes 
 •	System Idle Process PID(0) , System PID(4) : these processes are kernel level processes and the parent of all processes after that. The first process created when starting up a Windows machine is process “System Idle Process” which has a process ID of 0. A child process is then created named "System" with an ID of 4.
 •	Client Server Runtime Subsystem (csrss.exe): is a vital windows process that supports the entire GUI in addition to other low-level windows functions. The legitimate csrss.exe resides at %SystemRoot%\System32\ and the processes cannot be killed or terminated by normal users. The termination of this process will shut down the machine or cause it to be in an unusable state.
-
-![image](https://user-images.githubusercontent.com/78951224/148017580-d64b8ca8-7cd3-4373-9e1f-45e0f9b3dfb5.png)
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/78951224/148017580-d64b8ca8-7cd3-4373-9e1f-45e0f9b3dfb5.png"/>
+</p>
 •	WININIT (wininit.exe): WININIT is another critical process that manages drivers, services in addition to recording mouse and keyboard inputs. wininit.exe cannot be terminated by normal users. If terminated, it will result in restarting the system. WININT should have only one instance running as a process and its binary resides in C:\Windows\System32\.
 
 ![image](https://user-images.githubusercontent.com/78951224/148017673-1dd5e265-2ec5-44f9-9950-790efcc11c11.png)
@@ -46,9 +46,9 @@ The majority of processes mentioned above are directly or indirectly related to 
 # National Software Reference Library (NSRL)  
 NSRL by National Institute of Standard and Technology (NIST) provides a database with known good and bad binary hashes that can be used to identify whether a binary is legitimate or malicious. Utilizing the database helps threat hunters to conduct integrity checks on the binaries or scripts in the environment. The following PowerShell command can be used to get the file hash of the any file. 
 
-
-``C:\Windows\System32> Get-FileHash <File-Name> -Algorithm SHA1``
-  
+<p align="center">
+<code>C:\Windows\System32> Get-FileHash <File-Name> -Algorithm SHA1</code>
+  </p>
 The following screenshot shows the above-mentioned command being used on wininit.exe.
   
   ![image](https://user-images.githubusercontent.com/78951224/148018107-90ab4cf2-5e99-460e-90a3-e89ba6b89d70.png)
