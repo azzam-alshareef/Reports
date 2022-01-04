@@ -1,4 +1,4 @@
-# Basics-Windows-Threat-Hutning
+# Basics-Windows-Threat-Hunting
 # Windows Threat Hunting
 Threat hunting on endpoints running a Windows operating system is a complicated task, as there are many moving parts and places adversaries can hide at. This report outlines some of topics, resources and considerations, which aids in threat hunting on Windows endpoints. This report will be going through behavioural analysis which encompasses common legitimate process that malicious software masquerades as, windows logon process, National Software Reference Library (NSRL) and living of the land technique and LOLBAS framework.
 # Behavioural Analysis 
